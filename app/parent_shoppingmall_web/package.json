@@ -10,7 +10,8 @@
     "build:prod": "vue-cli-service build",
     "build:stage": "vue-cli-service build --mode staging",
     "svg": "vsvg -s ./src/icons/svg -t ./src/icons/components --ext ts --es6",
-    "mock": "cd mock && ts-node-dev mock-server.ts"
+    "mock": "cd mock && ts-node-dev mock-server.ts",
+    "analyz": "NODE_ENV=production npm_config_report=true npm run build"
   },
   "dependencies": {
     "@tinymce/tinymce-vue": "^3.2.6",
@@ -107,7 +108,8 @@
     "vue-cli-plugin-element": "^1.0.1",
     "vue-cli-plugin-style-resources-loader": "^0.1.5",
     "vue-template-compiler": "^2.6.12",
-    "webpack": "^5.30.0"
+    "webpack": "^5.30.0",
+    "webpack-bundle-analyzer": "^4.4.2"
   },
   "bugs": {
     "url": "https://github.com/armour/vue-typescript-admin-template/issues"
