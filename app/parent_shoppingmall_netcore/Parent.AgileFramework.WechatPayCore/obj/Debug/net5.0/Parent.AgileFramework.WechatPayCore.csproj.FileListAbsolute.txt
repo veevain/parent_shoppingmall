@@ -1,0 +1,12 @@
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.WechatPayCore\bin\Debug\net5.0\Parent.AgileFramework.WechatPayCore.deps.json
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.WechatPayCore\bin\Debug\net5.0\Parent.AgileFramework.WechatPayCore.dll
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.WechatPayCore\bin\Debug\net5.0\ref\Parent.AgileFramework.WechatPayCore.dll
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.WechatPayCore\bin\Debug\net5.0\Parent.AgileFramework.WechatPayCore.pdb
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.WechatPayCore\obj\Debug\net5.0\Parent.AgileFramework.WechatPayCore.GeneratedMSBuildEditorConfig.editorconfig
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.WechatPayCore\obj\Debug\net5.0\Parent.AgileFramework.WechatPayCore.AssemblyInfoInputs.cache
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.WechatPayCore\obj\Debug\net5.0\Parent.AgileFramework.WechatPayCore.AssemblyInfo.cs
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.WechatPayCore\obj\Debug\net5.0\Parent.AgileFramework.WechatPayCore.csproj.CoreCompileInputs.cache
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.WechatPayCore\obj\Debug\net5.0\Parent.AgileFramework.WechatPayCore.dll
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.WechatPayCore\obj\Debug\net5.0\ref\Parent.AgileFramework.WechatPayCore.dll
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.WechatPayCore\obj\Debug\net5.0\Parent.AgileFramework.WechatPayCore.pdb
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.WechatPayCore\obj\Debug\net5.0\Parent.AgileFramework.WechatPayCore.csprojAssemblyReference.cache

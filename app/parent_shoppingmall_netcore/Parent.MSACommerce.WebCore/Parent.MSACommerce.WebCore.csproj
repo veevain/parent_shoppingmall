@@ -1,8 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.Core.Api" Version="2.38.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Formatters.Json" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Parent.AgileFramework.Common\Parent.AgileFramework.Common.csproj" />
+    <ProjectReference Include="..\Parent.AgileFramework.Core\Parent.AgileFramework.Core.csproj" />
+    <ProjectReference Include="..\Parent.MSACommerce.Model\Parent.MSACommerce.Model.csproj" />
+  </ItemGroup>
 
 </Project>

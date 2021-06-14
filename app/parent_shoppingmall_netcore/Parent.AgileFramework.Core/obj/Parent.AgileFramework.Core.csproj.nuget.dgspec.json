@@ -4,6 +4,64 @@
     "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Core\\Parent.AgileFramework.Core.csproj": {}
   },
   "projects": {
+    "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Common\\Parent.AgileFramework.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Common\\Parent.AgileFramework.Common.csproj",
+        "projectName": "Parent.AgileFramework.Common",
+        "projectPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Common\\Parent.AgileFramework.Common.csproj",
+        "packagesPath": "C:\\Users\\14981\\.nuget\\packages\\",
+        "outputPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\14981\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Core\\Parent.AgileFramework.Core.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -31,7 +89,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Common\\Parent.AgileFramework.Common.csproj": {
+                "projectPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Common\\Parent.AgileFramework.Common.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

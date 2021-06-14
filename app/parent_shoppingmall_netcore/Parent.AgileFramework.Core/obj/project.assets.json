@@ -209,6 +209,16 @@
         "runtime": {
           "lib/netcoreapp3.0/System.Threading.Channels.dll": {}
         }
+      },
+      "Parent.AgileFramework.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Parent.AgileFramework.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Parent.AgileFramework.Common.dll": {}
+        }
       }
     }
   },
@@ -628,6 +638,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Parent.AgileFramework.Common/1.0.0": {
+      "type": "project",
+      "path": "../Parent.AgileFramework.Common/Parent.AgileFramework.Common.csproj",
+      "msbuildProject": "../Parent.AgileFramework.Common/Parent.AgileFramework.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -641,6 +656,7 @@
       "Microsoft.Extensions.Options >= 5.0.0",
       "NConsul >= 0.8.1",
       "Newtonsoft.Json >= 13.0.1",
+      "Parent.AgileFramework.Common >= 1.0.0",
       "RabbitMQ.Client >= 6.2.1",
       "aliyun-net-sdk-core >= 1.5.10"
     ]
@@ -676,7 +692,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Common\\Parent.AgileFramework.Common.csproj": {
+              "projectPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Common\\Parent.AgileFramework.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
