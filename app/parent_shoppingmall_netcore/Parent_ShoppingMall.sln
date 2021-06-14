@@ -3,29 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parent.AgileFramework.Core", "Parent.AgileFramework.Core\Parent.AgileFramework.Core.csproj", "{9EE50ADB-C67B-475A-8EB0-4BAE14831772}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Parent.AgileFramework.Core", "Parent.AgileFramework.Core\Parent.AgileFramework.Core.csproj", "{9EE50ADB-C67B-475A-8EB0-4BAE14831772}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{E11537BC-C807-4355-8473-C983214F2A28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parent.AgileFramework.Common", "Parent.AgileFramework.Common\Parent.AgileFramework.Common.csproj", "{5A713C96-B670-4667-A8CF-40B46823314E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Parent.AgileFramework.Common", "Parent.AgileFramework.Common\Parent.AgileFramework.Common.csproj", "{5A713C96-B670-4667-A8CF-40B46823314E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parent.AgileFramework.WechatPayCore", "Parent.AgileFramework.WechatPayCore\Parent.AgileFramework.WechatPayCore.csproj", "{7EE3283C-49CB-4933-B59E-DA5E353A61D3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "log4net.Kafka.Core", "log4net.Kafka.Core\log4net.Kafka.Core.csproj", "{878E1A11-B763-4091-8537-28AF33EB03F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Parent.AgileFramework.WechatPayCore", "Parent.AgileFramework.WechatPayCore\Parent.AgileFramework.WechatPayCore.csproj", "{7EE3283C-49CB-4933-B59E-DA5E353A61D3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{7E8A7F11-3190-49CF-ABB8-5035E10B9BD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parent.MSACommerce.DTOModel", "Parent.MSACommerce.DTOModel\Parent.MSACommerce.DTOModel.csproj", "{95D89020-4A6F-4289-8B3D-C631F2EE17FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Parent.MSACommerce.DTOModel", "Parent.MSACommerce.DTOModel\Parent.MSACommerce.DTOModel.csproj", "{95D89020-4A6F-4289-8B3D-C631F2EE17FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parent.MSACommerce.Interface", "Parent.MSACommerce.Interface\Parent.MSACommerce.Interface.csproj", "{72BE24F8-A1E8-46A3-BA71-EDCCF6A25513}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Parent.MSACommerce.Interface", "Parent.MSACommerce.Interface\Parent.MSACommerce.Interface.csproj", "{72BE24F8-A1E8-46A3-BA71-EDCCF6A25513}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parent.MSACommerce.Model", "Parent.MSACommerce.Model\Parent.MSACommerce.Model.csproj", "{BC29E984-986B-42A6-8224-93A3C1EB8C4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Parent.MSACommerce.Model", "Parent.MSACommerce.Model\Parent.MSACommerce.Model.csproj", "{BC29E984-986B-42A6-8224-93A3C1EB8C4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parent.MSACommerce.Service", "Parent.MSACommerce.Service\Parent.MSACommerce.Service.csproj", "{78AD08C0-30BE-4A2F-A147-01A40959F177}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Parent.MSACommerce.Service", "Parent.MSACommerce.Service\Parent.MSACommerce.Service.csproj", "{78AD08C0-30BE-4A2F-A147-01A40959F177}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicroServiceInstance", "MicroServiceInstance", "{89D877E8-0454-44D9-885D-15BA55571FF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parent.MSACommerce.WebCore", "Parent.MSACommerce.WebCore\Parent.MSACommerce.WebCore.csproj", "{6B49AC01-84D0-4E45-8D7C-9E13143A2AE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Parent.MSACommerce.WebCore", "Parent.MSACommerce.WebCore\Parent.MSACommerce.WebCore.csproj", "{6B49AC01-84D0-4E45-8D7C-9E13143A2AE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "log4net.Kafka.Core", "log4net.Kafka.Core\log4net.Kafka.Core.csproj", "{53C6B850-6B86-484F-940C-07EAEA9973B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,10 +45,6 @@ Global
 		{7EE3283C-49CB-4933-B59E-DA5E353A61D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EE3283C-49CB-4933-B59E-DA5E353A61D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EE3283C-49CB-4933-B59E-DA5E353A61D3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{878E1A11-B763-4091-8537-28AF33EB03F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{878E1A11-B763-4091-8537-28AF33EB03F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{878E1A11-B763-4091-8537-28AF33EB03F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{878E1A11-B763-4091-8537-28AF33EB03F7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{95D89020-4A6F-4289-8B3D-C631F2EE17FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{95D89020-4A6F-4289-8B3D-C631F2EE17FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95D89020-4A6F-4289-8B3D-C631F2EE17FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -69,6 +65,10 @@ Global
 		{6B49AC01-84D0-4E45-8D7C-9E13143A2AE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B49AC01-84D0-4E45-8D7C-9E13143A2AE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B49AC01-84D0-4E45-8D7C-9E13143A2AE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53C6B850-6B86-484F-940C-07EAEA9973B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53C6B850-6B86-484F-940C-07EAEA9973B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53C6B850-6B86-484F-940C-07EAEA9973B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53C6B850-6B86-484F-940C-07EAEA9973B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,12 +77,12 @@ Global
 		{9EE50ADB-C67B-475A-8EB0-4BAE14831772} = {E11537BC-C807-4355-8473-C983214F2A28}
 		{5A713C96-B670-4667-A8CF-40B46823314E} = {E11537BC-C807-4355-8473-C983214F2A28}
 		{7EE3283C-49CB-4933-B59E-DA5E353A61D3} = {E11537BC-C807-4355-8473-C983214F2A28}
-		{878E1A11-B763-4091-8537-28AF33EB03F7} = {E11537BC-C807-4355-8473-C983214F2A28}
 		{95D89020-4A6F-4289-8B3D-C631F2EE17FF} = {7E8A7F11-3190-49CF-ABB8-5035E10B9BD0}
 		{72BE24F8-A1E8-46A3-BA71-EDCCF6A25513} = {7E8A7F11-3190-49CF-ABB8-5035E10B9BD0}
 		{BC29E984-986B-42A6-8224-93A3C1EB8C4A} = {7E8A7F11-3190-49CF-ABB8-5035E10B9BD0}
 		{78AD08C0-30BE-4A2F-A147-01A40959F177} = {7E8A7F11-3190-49CF-ABB8-5035E10B9BD0}
 		{6B49AC01-84D0-4E45-8D7C-9E13143A2AE4} = {E11537BC-C807-4355-8473-C983214F2A28}
+		{53C6B850-6B86-484F-940C-07EAEA9973B1} = {E11537BC-C807-4355-8473-C983214F2A28}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5E9439AF-908C-46EA-9BDE-E966D5D6E8BB}

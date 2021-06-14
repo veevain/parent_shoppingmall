@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("log4net.Kafka.Core")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Parent.AgileFramework.Common")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("log4net.Kafka.Core")]
-[assembly: System.Reflection.AssemblyTitleAttribute("log4net.Kafka.Core")]
+[assembly: System.Reflection.AssemblyProductAttribute("Parent.AgileFramework.Common")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Parent.AgileFramework.Common")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // 由 MSBuild WriteCodeFragment 类生成。

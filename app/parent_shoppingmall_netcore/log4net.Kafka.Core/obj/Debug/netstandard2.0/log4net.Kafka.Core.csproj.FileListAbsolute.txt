@@ -1,0 +1,9 @@
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\log4net.Kafka.Core\bin\Debug\netstandard2.0\log4net.Kafka.Core.deps.json
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\log4net.Kafka.Core\bin\Debug\netstandard2.0\log4net.Kafka.Core.dll
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\log4net.Kafka.Core\bin\Debug\netstandard2.0\log4net.Kafka.Core.pdb
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\log4net.Kafka.Core\obj\Debug\netstandard2.0\log4net.Kafka.Core.csprojAssemblyReference.cache
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\log4net.Kafka.Core\obj\Debug\netstandard2.0\log4net.Kafka.Core.AssemblyInfoInputs.cache
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\log4net.Kafka.Core\obj\Debug\netstandard2.0\log4net.Kafka.Core.AssemblyInfo.cs
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\log4net.Kafka.Core\obj\Debug\netstandard2.0\log4net.Kafka.Core.csproj.CoreCompileInputs.cache
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\log4net.Kafka.Core\obj\Debug\netstandard2.0\log4net.Kafka.Core.dll
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\log4net.Kafka.Core\obj\Debug\netstandard2.0\log4net.Kafka.Core.pdb
