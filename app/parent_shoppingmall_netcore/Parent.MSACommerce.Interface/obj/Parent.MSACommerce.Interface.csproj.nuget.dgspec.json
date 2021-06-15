@@ -4,14 +4,260 @@
     "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.MSACommerce.Interface\\Parent.MSACommerce.Interface.csproj": {}
   },
   "projects": {
-    "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.MSACommerce.Interface\\Parent.MSACommerce.Interface.csproj": {
+    "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Common\\Parent.AgileFramework.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.MSACommerce.Interface\\Parent.MSACommerce.Interface.csproj",
-        "projectName": "Parent.MSACommerce.Interface",
-        "projectPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.MSACommerce.Interface\\Parent.MSACommerce.Interface.csproj",
+        "projectUniqueName": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Common\\Parent.AgileFramework.Common.csproj",
+        "projectName": "Parent.AgileFramework.Common",
+        "projectPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Common\\Parent.AgileFramework.Common.csproj",
         "packagesPath": "C:\\Users\\14981\\.nuget\\packages\\",
-        "outputPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.MSACommerce.Interface\\obj\\",
+        "outputPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\14981\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Core\\Parent.AgileFramework.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Core\\Parent.AgileFramework.Core.csproj",
+        "projectName": "Parent.AgileFramework.Core",
+        "projectPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Core\\Parent.AgileFramework.Core.csproj",
+        "packagesPath": "C:\\Users\\14981\\.nuget\\packages\\",
+        "outputPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\14981\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Common\\Parent.AgileFramework.Common.csproj": {
+                "projectPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Common\\Parent.AgileFramework.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Consul": {
+              "target": "Package",
+              "version": "[1.6.10.1, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "NConsul": {
+              "target": "Package",
+              "version": "[0.8.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.2.1, )"
+            },
+            "aliyun-net-sdk-core": {
+              "target": "Package",
+              "version": "[1.5.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.WechatPayCore\\Parent.AgileFramework.WechatPayCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.WechatPayCore\\Parent.AgileFramework.WechatPayCore.csproj",
+        "projectName": "Parent.AgileFramework.WechatPayCore",
+        "projectPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.WechatPayCore\\Parent.AgileFramework.WechatPayCore.csproj",
+        "packagesPath": "C:\\Users\\14981\\.nuget\\packages\\",
+        "outputPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.WechatPayCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\14981\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "NBuilder": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.MSACommerce.DTOModel\\Parent.MSACommerce.DTOModel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.MSACommerce.DTOModel\\Parent.MSACommerce.DTOModel.csproj",
+        "projectName": "Parent.MSACommerce.DTOModel",
+        "projectPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.MSACommerce.DTOModel\\Parent.MSACommerce.DTOModel.csproj",
+        "packagesPath": "C:\\Users\\14981\\.nuget\\packages\\",
+        "outputPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.MSACommerce.DTOModel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,6 +289,169 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.MSACommerce.Interface\\Parent.MSACommerce.Interface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.MSACommerce.Interface\\Parent.MSACommerce.Interface.csproj",
+        "projectName": "Parent.MSACommerce.Interface",
+        "projectPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.MSACommerce.Interface\\Parent.MSACommerce.Interface.csproj",
+        "packagesPath": "C:\\Users\\14981\\.nuget\\packages\\",
+        "outputPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.MSACommerce.Interface\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\14981\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Common\\Parent.AgileFramework.Common.csproj": {
+                "projectPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Common\\Parent.AgileFramework.Common.csproj"
+              },
+              "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Core\\Parent.AgileFramework.Core.csproj": {
+                "projectPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Core\\Parent.AgileFramework.Core.csproj"
+              },
+              "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.WechatPayCore\\Parent.AgileFramework.WechatPayCore.csproj": {
+                "projectPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.WechatPayCore\\Parent.AgileFramework.WechatPayCore.csproj"
+              },
+              "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.MSACommerce.DTOModel\\Parent.MSACommerce.DTOModel.csproj": {
+                "projectPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.MSACommerce.DTOModel\\Parent.MSACommerce.DTOModel.csproj"
+              },
+              "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.MSACommerce.Model\\Parent.MSACommerce.Model.csproj": {
+                "projectPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.MSACommerce.Model\\Parent.MSACommerce.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "NEST": {
+              "target": "Package",
+              "version": "[7.13.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.MSACommerce.Model\\Parent.MSACommerce.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.MSACommerce.Model\\Parent.MSACommerce.Model.csproj",
+        "projectName": "Parent.MSACommerce.Model",
+        "projectPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.MSACommerce.Model\\Parent.MSACommerce.Model.csproj",
+        "packagesPath": "C:\\Users\\14981\\.nuget\\packages\\",
+        "outputPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.MSACommerce.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\14981\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Common\\Parent.AgileFramework.Common.csproj": {
+                "projectPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.AgileFramework.Common\\Parent.AgileFramework.Common.csproj"
+              },
+              "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.MSACommerce.DTOModel\\Parent.MSACommerce.DTOModel.csproj": {
+                "projectPath": "E:\\parent_shoppingmall\\app\\parent_shoppingmall_netcore\\Parent.MSACommerce.DTOModel\\Parent.MSACommerce.DTOModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "NEST": {
+              "target": "Package",
+              "version": "[7.13.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

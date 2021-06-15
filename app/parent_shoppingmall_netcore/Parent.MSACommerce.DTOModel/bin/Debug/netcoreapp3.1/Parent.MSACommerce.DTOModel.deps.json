@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Parent.MSACommerce.Model/1.0.0": {
+      "Parent.MSACommerce.DTOModel/1.0.0": {
         "runtime": {
-          "Parent.MSACommerce.Model.dll": {}
+          "Parent.MSACommerce.DTOModel.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Parent.MSACommerce.Model/1.0.0": {
+    "Parent.MSACommerce.DTOModel/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

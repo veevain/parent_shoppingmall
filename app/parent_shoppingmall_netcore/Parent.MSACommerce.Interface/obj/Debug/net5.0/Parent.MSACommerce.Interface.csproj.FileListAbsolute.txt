@@ -1,0 +1,5 @@
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.Interface\obj\Debug\net5.0\Parent.MSACommerce.Interface.csprojAssemblyReference.cache
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.Interface\obj\Debug\net5.0\Parent.MSACommerce.Interface.GeneratedMSBuildEditorConfig.editorconfig
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.Interface\obj\Debug\net5.0\Parent.MSACommerce.Interface.AssemblyInfoInputs.cache
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.Interface\obj\Debug\net5.0\Parent.MSACommerce.Interface.AssemblyInfo.cs
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.Interface\obj\Debug\net5.0\Parent.MSACommerce.Interface.csproj.CoreCompileInputs.cache

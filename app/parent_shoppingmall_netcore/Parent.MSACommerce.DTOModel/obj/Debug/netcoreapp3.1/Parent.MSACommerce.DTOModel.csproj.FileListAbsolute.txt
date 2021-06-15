@@ -1,0 +1,13 @@
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.DTOModel\bin\Debug\netcoreapp3.1\Parent.MSACommerce.DTOModel.exe
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.DTOModel\bin\Debug\netcoreapp3.1\Parent.MSACommerce.DTOModel.deps.json
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.DTOModel\bin\Debug\netcoreapp3.1\Parent.MSACommerce.DTOModel.runtimeconfig.json
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.DTOModel\bin\Debug\netcoreapp3.1\Parent.MSACommerce.DTOModel.runtimeconfig.dev.json
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.DTOModel\bin\Debug\netcoreapp3.1\Parent.MSACommerce.DTOModel.dll
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.DTOModel\bin\Debug\netcoreapp3.1\Parent.MSACommerce.DTOModel.pdb
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.DTOModel\obj\Debug\netcoreapp3.1\Parent.MSACommerce.DTOModel.AssemblyInfoInputs.cache
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.DTOModel\obj\Debug\netcoreapp3.1\Parent.MSACommerce.DTOModel.AssemblyInfo.cs
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.DTOModel\obj\Debug\netcoreapp3.1\Parent.MSACommerce.DTOModel.csproj.CoreCompileInputs.cache
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.DTOModel\obj\Debug\netcoreapp3.1\Parent.MSACommerce.DTOModel.dll
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.DTOModel\obj\Debug\netcoreapp3.1\Parent.MSACommerce.DTOModel.pdb
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.DTOModel\obj\Debug\netcoreapp3.1\Parent.MSACommerce.DTOModel.genruntimeconfig.cache
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.DTOModel\obj\Debug\netcoreapp3.1\Parent.MSACommerce.DTOModel.csprojAssemblyReference.cache

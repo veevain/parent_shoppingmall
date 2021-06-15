@@ -2,7 +2,6 @@ E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.Com
 E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.Common\bin\Debug\net5.0\Parent.AgileFramework.Common.dll
 E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.Common\bin\Debug\net5.0\ref\Parent.AgileFramework.Common.dll
 E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.Common\bin\Debug\net5.0\Parent.AgileFramework.Common.pdb
-E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.Common\obj\Debug\net5.0\Parent.AgileFramework.Common.csprojAssemblyReference.cache
 E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.Common\obj\Debug\net5.0\Parent.AgileFramework.Common.GeneratedMSBuildEditorConfig.editorconfig
 E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.Common\obj\Debug\net5.0\Parent.AgileFramework.Common.AssemblyInfoInputs.cache
 E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.Common\obj\Debug\net5.0\Parent.AgileFramework.Common.AssemblyInfo.cs
@@ -10,3 +9,4 @@ E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.Com
 E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.Common\obj\Debug\net5.0\Parent.AgileFramework.Common.dll
 E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.Common\obj\Debug\net5.0\ref\Parent.AgileFramework.Common.dll
 E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.Common\obj\Debug\net5.0\Parent.AgileFramework.Common.pdb
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.Common\obj\Debug\net5.0\Parent.AgileFramework.Common.csprojAssemblyReference.cache
