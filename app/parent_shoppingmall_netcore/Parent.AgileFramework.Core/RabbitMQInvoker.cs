@@ -128,26 +128,24 @@ namespace Parent.AgileFramework.Core
             {
                 this.InitConnection();
             }
-            using (var channel = _CurrentConnection.CreateModel())//开辟新的信道通信
+            using var channel = _CurrentConnection.CreateModel();
+            try
             {
-                try
-                {
-                    channel.TxSelect();//开启Tx事务---RabbitMQ协议级的事务-----强事务
+                channel.TxSelect();//开启Tx事务---RabbitMQ协议级的事务-----强事务
 
-                    var body = Encoding.UTF8.GetBytes(message);
-                    channel.BasicPublish(exchange: exchangeName,
-                                         routingKey: string.Empty,
-                                         basicProperties: null,
-                                         body: body);
-                    channel.TxCommit();//提交
-                    Console.WriteLine($" [x] Sent {body.Length}");
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                    Console.WriteLine($"【{message}】发送到Broker失败！{ex.Message}");
-                    channel.TxRollback(); //事务回滚--前面的所有操作就全部作废了。。。。
-                }
+                var body = Encoding.UTF8.GetBytes(message);
+                channel.BasicPublish(exchange: exchangeName,
+                                     routingKey: string.Empty,
+                                     basicProperties: null,
+                                     body: body);
+                channel.TxCommit();//提交
+                Console.WriteLine($" [x] Sent {body.Length}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine($"【{message}】发送到Broker失败！{ex.Message}");
+                channel.TxRollback(); //事务回滚--前面的所有操作就全部作废了。。。。
             }
         }
 
@@ -165,48 +163,48 @@ namespace Parent.AgileFramework.Core
             {
                 this.InitConnection();
             }
-            using (var channel = _CurrentConnection.CreateModel())//开辟新的信道通信
+            using var channel = _CurrentConnection.CreateModel();
+            try
             {
-                try
-                {
-                    string delayExchangeName = "ZhaoxiMSA_DelayExchange";
+                string delayExchangeName = "ZhaoxiMSA_DelayExchange";
 
-                    //普通交换器
-                    channel.ExchangeDeclare(delayExchangeName, "fanout", true, false, null);
-                    //参数设置
-                    Dictionary<string, object> args = new Dictionary<string, object>();
-                    args.Add("x-message-ttl", delaySecond * 1000);//TTL 毫秒
-                    args.Add("x-dead-letter-exchange", targetExchangeName);//DLX
-                    args.Add("x-dead-letter-routing-key", "routingkey");//routingKey
-                    channel.QueueDeclare("ZhaoxiMSA_DelayQueue", true, false, false, args);
-                    channel.QueueBind(queue: "ZhaoxiMSA_DelayQueue",
-                        exchange: delayExchangeName,
-                        routingKey: string.Empty,
-                        arguments: null);
+                //普通交换器
+                channel.ExchangeDeclare(delayExchangeName, "fanout", true, false, null);
+                //参数设置
+                Dictionary<string, object> args = new Dictionary<string, object>
+                    {
+                        { "x-message-ttl", delaySecond * 1000 },//TTL 毫秒
+                        { "x-dead-letter-exchange", targetExchangeName },//DLX
+                        { "x-dead-letter-routing-key", "routingkey" }//routingKey
+                    };
+                channel.QueueDeclare("ZhaoxiMSA_DelayQueue", true, false, false, args);
+                channel.QueueBind(queue: "ZhaoxiMSA_DelayQueue",
+                    exchange: delayExchangeName,
+                    routingKey: string.Empty,
+                    arguments: null);
 
-                    ////DLX--- //死信队列绑定
-                    //channel.ExchangeDeclare("ZhaoxiMSA_exchange_dlx", "fanout", true, false, null);
-                    //channel.QueueDeclare("ZhaoxiMSA_queue_dlx", true, false, false, null);
-                    //channel.QueueBind("ZhaoxiMSA_queue_dlx", "ZhaoxiMSA_exchange_dlx", "routingkey", null);
+                ////DLX--- //死信队列绑定
+                //channel.ExchangeDeclare("ZhaoxiMSA_exchange_dlx", "fanout", true, false, null);
+                //channel.QueueDeclare("ZhaoxiMSA_queue_dlx", true, false, false, null);
+                //channel.QueueBind("ZhaoxiMSA_queue_dlx", "ZhaoxiMSA_exchange_dlx", "routingkey", null);
 
 
-                    channel.TxSelect();//开启Tx事务---RabbitMQ协议级的事务-----强事务
-                    var properties = channel.CreateBasicProperties();
+                channel.TxSelect();//开启Tx事务---RabbitMQ协议级的事务-----强事务
+                var properties = channel.CreateBasicProperties();
 
-                    var body = Encoding.UTF8.GetBytes(message);
-                    channel.BasicPublish(exchange: delayExchangeName,
-                                         routingKey: string.Empty,
-                                         basicProperties: properties,
-                                         body: body);
-                    channel.TxCommit();//提交
-                    Console.WriteLine($" [x] Sent {body.Length}");
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                    Console.WriteLine($"【{message}】发送到Broker失败！{ex.Message}");
-                    channel.TxRollback(); //事务回滚--前面的所有操作就全部作废了。。。。
-                }
+                var body = Encoding.UTF8.GetBytes(message);
+                channel.BasicPublish(exchange: delayExchangeName,
+                                     routingKey: string.Empty,
+                                     basicProperties: properties,
+                                     body: body);
+                channel.TxCommit();//提交
+                Console.WriteLine($" [x] Sent {body.Length}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine($"【{message}】发送到Broker失败！{ex.Message}");
+                channel.TxRollback(); //事务回滚--前面的所有操作就全部作废了。。。。
             }
         }
 
@@ -222,29 +220,27 @@ namespace Parent.AgileFramework.Core
 
             Task.Run(() =>
             {
-                using (var channel = _CurrentConnection.CreateModel())
+                using var channel = _CurrentConnection.CreateModel();
+                var consumer = new EventingBasicConsumer(channel);
+                channel.BasicQos(0, 0, true);
+                consumer.Received += (sender, ea) =>
                 {
-                    var consumer = new EventingBasicConsumer(channel);
-                    channel.BasicQos(0, 0, true);
-                    consumer.Received += (sender, ea) =>
+                    string str = Encoding.UTF8.GetString(ea.Body.ToArray());
+                    if (func(str))
                     {
-                        string str = Encoding.UTF8.GetString(ea.Body.ToArray());
-                        if (func(str))
-                        {
-                            channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);//确认已消费
+                        channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);//确认已消费
                         }
-                        else
-                        {
+                    else
+                    {
                             //channel.BasicReject(deliveryTag: ea.DeliveryTag, requeue: true);//放回队列--重新包装信息，放入其他队列
                         }
-                    };
-                    channel.BasicConsume(queue: rabbitMQConsumerMode.QueueName,
-                                         autoAck: false,//不ACK
-                                         consumer: consumer);
-                    Console.WriteLine($" Register Consumer To {rabbitMQConsumerMode.ExchangeName}-{rabbitMQConsumerMode.QueueName}");
-                    Console.ReadLine();
-                    Console.WriteLine($" After Register Consumer To {rabbitMQConsumerMode.ExchangeName}-{rabbitMQConsumerMode.QueueName}");
-                }
+                };
+                channel.BasicConsume(queue: rabbitMQConsumerMode.QueueName,
+                                     autoAck: false,//不ACK
+                                     consumer: consumer);
+                Console.WriteLine($" Register Consumer To {rabbitMQConsumerMode.ExchangeName}-{rabbitMQConsumerMode.QueueName}");
+                Console.ReadLine();
+                Console.WriteLine($" After Register Consumer To {rabbitMQConsumerMode.ExchangeName}-{rabbitMQConsumerMode.QueueName}");
             });
         }
         #endregion

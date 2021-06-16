@@ -71,7 +71,7 @@ namespace Parent.MSACommerce.Core
 			{
 				action();
 			}
-			catch (Exception e)
+			catch (Exception)
 			{
 
 
@@ -82,8 +82,8 @@ namespace Parent.MSACommerce.Core
 		{
 			Stopwatch sw = Stopwatch.StartNew();
 			Exception ex = null;
-			bool isError = false;
-			T result;
+            bool isError = false;
+            T result;
 			try
 			{
 				result = action();
@@ -108,7 +108,7 @@ namespace Parent.MSACommerce.Core
 
 			Stopwatch sw = Stopwatch.StartNew();
 			bool isError = false;
-			Exception ex = null;
+			//Exception ex = null;
 			try
 			{
 				action();

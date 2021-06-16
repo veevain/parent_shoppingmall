@@ -1,8 +1,24 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetCore.CAP" Version="5.1.0" />
+    <PackageReference Include="DotNetCore.CAP.MySql" Version="5.1.0" />
+    <PackageReference Include="Hei.Captcha" Version="0.3.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Parent.AgileFramework.Common\Parent.AgileFramework.Common.csproj" />
+    <ProjectReference Include="..\Parent.AgileFramework.Core\Parent.AgileFramework.Core.csproj" />
+    <ProjectReference Include="..\Parent.MSACommerce.DTOModel\Parent.MSACommerce.DTOModel.csproj" />
+    <ProjectReference Include="..\Parent.MSACommerce.Interface\Parent.MSACommerce.Interface.csproj" />
+    <ProjectReference Include="..\Parent.MSACommerce.Model\Parent.MSACommerce.Model.csproj" />
+  </ItemGroup>
 
 </Project>

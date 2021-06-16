@@ -26,7 +26,7 @@ namespace Parent.AgileFramework.Core.ConsulExtend
             }
         }
 
-        private ConsulClientOption _ConsulClientOption = null;
+        //private readonly ConsulClientOption _ConsulClientOption = null;
 
         public AverageDispatcher(IOptionsMonitor<ConsulClientOption> consulClientOption) : base(consulClientOption)
         {

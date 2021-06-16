@@ -26,11 +26,9 @@ namespace Parent.AgileFramework.WechatPayCore
             var stream = new MemoryStream();
             await request.Body.CopyToAsync(stream);
             stream.Seek(0, 0);
-            using (var reader = new StreamReader(stream, encoding))
-            {
-                var result = await reader.ReadToEndAsync();
-                return result;
-            }
+            using var reader = new StreamReader(stream, encoding);
+            var result = await reader.ReadToEndAsync();
+            return result;
         }
 
         /// <summary>

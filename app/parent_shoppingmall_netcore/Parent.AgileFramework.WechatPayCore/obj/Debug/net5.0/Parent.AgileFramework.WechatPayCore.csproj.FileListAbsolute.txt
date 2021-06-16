@@ -9,3 +9,4 @@ E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.Wec
 E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.WechatPayCore\obj\Debug\net5.0\Parent.AgileFramework.WechatPayCore.dll
 E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.WechatPayCore\obj\Debug\net5.0\ref\Parent.AgileFramework.WechatPayCore.dll
 E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.WechatPayCore\obj\Debug\net5.0\Parent.AgileFramework.WechatPayCore.pdb
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.AgileFramework.WechatPayCore\obj\Debug\net5.0\Parent.AgileFramework.WechatPayCore.csprojAssemblyReference.cache

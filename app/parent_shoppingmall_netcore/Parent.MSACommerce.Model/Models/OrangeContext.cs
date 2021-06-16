@@ -60,7 +60,7 @@ namespace Parent.MSACommerce.Model
 						// Replace with your server version and type.
 						// For common usages, see pull request #1233.
 						new MySqlServerVersion(new Version(5, 7, 32)), // use MariaDbServerVersion for MariaDB
-						mySqlOptions => mySqlOptions
+						mySqlOptions => mySqlOptions.EnableStringComparisonTranslations()
 						.EnableRetryOnFailure())
 					// Everything from this point on is optional but helps with debugging.
 					.EnableSensitiveDataLogging()
@@ -99,7 +99,7 @@ namespace Parent.MSACommerce.Model
 					.HasDefaultValueSql("''")
 					.HasComment("品牌图片地址")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 
 				entity.Property(e => e.Letter)
 					.HasColumnName("letter")
@@ -107,7 +107,7 @@ namespace Parent.MSACommerce.Model
 					.HasDefaultValueSql("''")
 					.HasComment("品牌的首字母")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 
 				entity.Property(e => e.Name)
 					.IsRequired()
@@ -115,7 +115,7 @@ namespace Parent.MSACommerce.Model
 					.HasColumnType("varchar(32)")
 					.HasComment("品牌名称")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 			});
 
 			modelBuilder.Entity<TbCategory>(entity =>
@@ -125,7 +125,7 @@ namespace Parent.MSACommerce.Model
 				entity.HasComment("商品类目表，类目和商品(spu)是一对多关系，类目与品牌是多对多关系");
 
 				entity.HasIndex(e => e.ParentId)
-					.HasName("key_parent_id");
+					.HasDatabaseName("key_parent_id");
 
 				entity.Property(e => e.Id)
 					.HasColumnName("id")
@@ -142,7 +142,7 @@ namespace Parent.MSACommerce.Model
 					.HasColumnType("varchar(32)")
 					.HasComment("类目名称")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 
 				entity.Property(e => e.ParentId)
 					.HasColumnName("parent_id")
@@ -183,10 +183,10 @@ namespace Parent.MSACommerce.Model
 				entity.ToTable("tb_order");
 
 				entity.HasIndex(e => e.BuyerNick)
-					.HasName("buyer_nick");
+					.HasDatabaseName("buyer_nick");
 
 				entity.HasIndex(e => e.CreateTime)
-					.HasName("create_time");
+					.HasDatabaseName("create_time");
 
 				entity.Property(e => e.OrderId)
 					.HasColumnName("order_id")
@@ -203,7 +203,7 @@ namespace Parent.MSACommerce.Model
 					.HasColumnType("varchar(128)")
 					.HasComment("买家留言")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_bin");
+					.UseCollation("utf8_bin");
 
 				entity.Property(e => e.BuyerNick)
 					.IsRequired()
@@ -211,7 +211,7 @@ namespace Parent.MSACommerce.Model
 					.HasColumnType("varchar(32)")
 					.HasComment("买家昵称")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_bin");
+					.UseCollation("utf8_bin");
 
 				entity.Property(e => e.BuyerRate)
 					.HasColumnName("buyer_rate")
@@ -243,14 +243,14 @@ namespace Parent.MSACommerce.Model
 					.HasColumnType("varchar(256)")
 					.HasDefaultValueSql("''")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_bin");
+					.UseCollation("utf8_bin");
 
 				entity.Property(e => e.Receiver)
 					.HasColumnName("receiver")
 					.HasColumnType("varchar(32)")
 					.HasComment("收货人")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_bin");
+					.UseCollation("utf8_bin");
 
 				entity.Property(e => e.ReceiverAddress)
 					.HasColumnName("receiver_address")
@@ -258,7 +258,7 @@ namespace Parent.MSACommerce.Model
 					.HasDefaultValueSql("''")
 					.HasComment("收获地址（街道、住址等详细地址）")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_bin");
+					.UseCollation("utf8_bin");
 
 				entity.Property(e => e.ReceiverCity)
 					.HasColumnName("receiver_city")
@@ -266,7 +266,7 @@ namespace Parent.MSACommerce.Model
 					.HasDefaultValueSql("''")
 					.HasComment("收获地址（市）")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_bin");
+					.UseCollation("utf8_bin");
 
 				entity.Property(e => e.ReceiverDistrict)
 					.HasColumnName("receiver_district")
@@ -274,14 +274,14 @@ namespace Parent.MSACommerce.Model
 					.HasDefaultValueSql("''")
 					.HasComment("收获地址（区/县）")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_bin");
+					.UseCollation("utf8_bin");
 
 				entity.Property(e => e.ReceiverMobile)
 					.HasColumnName("receiver_mobile")
 					.HasColumnType("varchar(11)")
 					.HasComment("收货人手机")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_bin");
+					.UseCollation("utf8_bin");
 
 				entity.Property(e => e.ReceiverState)
 					.HasColumnName("receiver_state")
@@ -289,28 +289,28 @@ namespace Parent.MSACommerce.Model
 					.HasDefaultValueSql("''")
 					.HasComment("收获地址（省）")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_bin");
+					.UseCollation("utf8_bin");
 
 				entity.Property(e => e.ReceiverZip)
 					.HasColumnName("receiver_zip")
 					.HasColumnType("varchar(16)")
 					.HasComment("收货人邮编")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_bin");
+					.UseCollation("utf8_bin");
 
 				entity.Property(e => e.ShippingCode)
 					.HasColumnName("shipping_code")
 					.HasColumnType("varchar(20)")
 					.HasComment("物流单号")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_bin");
+					.UseCollation("utf8_bin");
 
 				entity.Property(e => e.ShippingName)
 					.HasColumnName("shipping_name")
 					.HasColumnType("varchar(20)")
 					.HasComment("物流名称")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_bin");
+					.UseCollation("utf8_bin");
 
 				entity.Property(e => e.SourceType)
 					.HasColumnName("source_type")
@@ -329,7 +329,7 @@ namespace Parent.MSACommerce.Model
 					.HasColumnType("varchar(32)")
 					.HasComment("用户id")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_bin");
+					.UseCollation("utf8_bin");
 			});
 
 			modelBuilder.Entity<TbOrderDetail>(entity =>
@@ -339,7 +339,7 @@ namespace Parent.MSACommerce.Model
 				entity.HasComment("订单详情表");
 
 				entity.HasIndex(e => e.OrderId)
-					.HasName("key_order_id");
+					.HasDatabaseName("key_order_id");
 
 				entity.Property(e => e.Id)
 					.HasColumnName("id")
@@ -352,7 +352,7 @@ namespace Parent.MSACommerce.Model
 					.HasDefaultValueSql("''")
 					.HasComment("商品图片")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 
 				entity.Property(e => e.Num)
 					.HasColumnName("num")
@@ -370,7 +370,7 @@ namespace Parent.MSACommerce.Model
 					.HasDefaultValueSql("''")
 					.HasComment("商品动态属性键值集")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 
 				entity.Property(e => e.Price)
 					.HasColumnName("price")
@@ -388,7 +388,7 @@ namespace Parent.MSACommerce.Model
 					.HasColumnType("varchar(256)")
 					.HasComment("商品标题")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 			});
 
 			modelBuilder.Entity<TbOrderStatus>(entity =>
@@ -401,7 +401,7 @@ namespace Parent.MSACommerce.Model
 				entity.HasComment("订单状态表");
 
 				entity.HasIndex(e => e.Status)
-					.HasName("status");
+					.HasDatabaseName("status");
 
 				entity.Property(e => e.OrderId)
 					.HasColumnName("order_id")
@@ -447,7 +447,7 @@ namespace Parent.MSACommerce.Model
 			//modelBuilder.Entity<TbPayLog>(entity =>
 			//{
 			//	entity.HasKey(e => e.OrderId)
-			//		.HasName("PRIMARY");
+			//		.HasDatabaseName("PRIMARY");
 
 			//	entity.ToTable("tb_pay_log");
 
@@ -461,7 +461,7 @@ namespace Parent.MSACommerce.Model
 			//		.HasColumnType("varchar(16)")
 			//		.HasComment("银行类型")
 			//		.HasCharSet("utf8")
-			//		.HasCollation("utf8_general_ci");
+			//		.UseCollation("utf8_general_ci");
 
 			//	entity.Property(e => e.ClosedTime)
 			//		.HasColumnName("closed_time")
@@ -501,7 +501,7 @@ namespace Parent.MSACommerce.Model
 			//		.HasColumnType("varchar(32)")
 			//		.HasComment("微信交易号码")
 			//		.HasCharSet("utf8")
-			//		.HasCollation("utf8_general_ci");
+			//		.UseCollation("utf8_general_ci");
 
 			//	entity.Property(e => e.UserId)
 			//		.HasColumnName("user_id")
@@ -558,7 +558,7 @@ namespace Parent.MSACommerce.Model
 					.HasColumnType("varchar(256)")
 					.HasComment("秒杀商品图片")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 
 				entity.Property(e => e.SeckillPrice)
 					.HasColumnName("seckill_price")
@@ -581,7 +581,7 @@ namespace Parent.MSACommerce.Model
 					.HasColumnType("varchar(256)")
 					.HasComment("秒杀商品标题")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 			});
 
 			modelBuilder.Entity<TbSku>(entity =>
@@ -591,7 +591,7 @@ namespace Parent.MSACommerce.Model
 				entity.HasComment("sku表,该表表示具体的商品实体,如黑色的 64g的iphone 8");
 
 				entity.HasIndex(e => e.SpuId)
-					.HasName("key_spu_id");
+					.HasDatabaseName("key_spu_id");
 
 				entity.Property(e => e.Id)
 					.HasColumnName("id")
@@ -615,7 +615,7 @@ namespace Parent.MSACommerce.Model
 					.HasDefaultValueSql("''")
 					.HasComment("商品的图片，多个图片以‘,’分割")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 
 				entity.Property(e => e.Indexes)
 					.HasColumnName("indexes")
@@ -623,7 +623,7 @@ namespace Parent.MSACommerce.Model
 					.HasDefaultValueSql("''")
 					.HasComment("特有规格属性在spu属性模板中的对应下标组合")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 
 				entity.Property(e => e.LastUpdateTime)
 					.HasColumnName("last_update_time")
@@ -636,7 +636,7 @@ namespace Parent.MSACommerce.Model
 					.HasDefaultValueSql("''")
 					.HasComment("sku的特有规格参数键值对，json格式，反序列化时请使用linkedHashMap，保证有序")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 
 				entity.Property(e => e.Price)
 					.HasColumnName("price")
@@ -654,7 +654,7 @@ namespace Parent.MSACommerce.Model
 					.HasColumnType("varchar(256)")
 					.HasComment("商品标题")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 			});
 
 			modelBuilder.Entity<TbSpecGroup>(entity =>
@@ -664,7 +664,7 @@ namespace Parent.MSACommerce.Model
 				entity.HasComment("规格参数的分组表，每个商品分类下有多个规格参数组");
 
 				entity.HasIndex(e => e.Cid)
-					.HasName("key_category");
+					.HasDatabaseName("key_category");
 
 				entity.Property(e => e.Id)
 					.HasColumnName("id")
@@ -682,7 +682,7 @@ namespace Parent.MSACommerce.Model
 					.HasColumnType("varchar(32)")
 					.HasComment("规格组的名称")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 			});
 
 			modelBuilder.Entity<TbSpecParam>(entity =>
@@ -692,10 +692,10 @@ namespace Parent.MSACommerce.Model
 				entity.HasComment("规格参数组下的参数名");
 
 				entity.HasIndex(e => e.Cid)
-					.HasName("key_category");
+					.HasDatabaseName("key_category");
 
 				entity.HasIndex(e => e.GroupId)
-					.HasName("key_group");
+					.HasDatabaseName("key_group");
 
 				entity.Property(e => e.Id)
 					.HasColumnName("id")
@@ -721,7 +721,7 @@ namespace Parent.MSACommerce.Model
 					.HasColumnType("varchar(256)")
 					.HasComment("参数名")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 
 				entity.Property(e => e.Numeric)
 					.HasColumnName("numeric")
@@ -737,7 +737,7 @@ namespace Parent.MSACommerce.Model
 					.HasDefaultValueSql("''")
 					.HasComment("数值类型参数，如果需要搜索，则添加分段间隔值，如CPU频率间隔：0.5-1.0")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 
 				entity.Property(e => e.Unit)
 					.HasColumnName("unit")
@@ -745,7 +745,7 @@ namespace Parent.MSACommerce.Model
 					.HasDefaultValueSql("''")
 					.HasComment("数字类型参数的单位，非数字类型可以为空")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 			});
 
 			modelBuilder.Entity<TbSpu>(entity =>
@@ -801,7 +801,7 @@ namespace Parent.MSACommerce.Model
 					.HasDefaultValueSql("''")
 					.HasComment("子标题")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 
 				entity.Property(e => e.Title)
 					.IsRequired()
@@ -810,7 +810,7 @@ namespace Parent.MSACommerce.Model
 					.HasDefaultValueSql("''")
 					.HasComment("标题")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 
 				entity.Property(e => e.Valid)
 					.IsRequired()
@@ -836,14 +836,14 @@ namespace Parent.MSACommerce.Model
 					.HasDefaultValueSql("''")
 					.HasComment("售后服务")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 
 				entity.Property(e => e.Description)
 					.HasColumnName("description")
 					.HasColumnType("text")
 					.HasComment("商品描述信息")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 
 				entity.Property(e => e.GenericSpec)
 					.IsRequired()
@@ -852,7 +852,7 @@ namespace Parent.MSACommerce.Model
 					.HasDefaultValueSql("''")
 					.HasComment("通用规格参数数据")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 
 				entity.Property(e => e.PackingList)
 					.HasColumnName("packing_list")
@@ -860,7 +860,7 @@ namespace Parent.MSACommerce.Model
 					.HasDefaultValueSql("''")
 					.HasComment("包装清单")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 
 				entity.Property(e => e.SpecialSpec)
 					.IsRequired()
@@ -868,7 +868,7 @@ namespace Parent.MSACommerce.Model
 					.HasColumnType("varchar(1024)")
 					.HasComment("特有规格参数及可选值信息，json格式")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 			});
 
 			modelBuilder.Entity<TbStock>(entity =>
@@ -910,7 +910,7 @@ namespace Parent.MSACommerce.Model
 				entity.HasComment("用户表");
 
 				entity.HasIndex(e => e.Username)
-					.HasName("username")
+					.HasDatabaseName("username")
 					.IsUnique();
 
 				entity.Property(e => e.id)
@@ -928,14 +928,14 @@ namespace Parent.MSACommerce.Model
 					.HasColumnType("varchar(32)")
 					.HasComment("密码，加密存储")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 
 				entity.Property(e => e.Phone)
 					.HasColumnName("phone")
 					.HasColumnType("varchar(11)")
 					.HasComment("注册手机号")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 
 				entity.Property(e => e.Salt)
 					.IsRequired()
@@ -943,7 +943,7 @@ namespace Parent.MSACommerce.Model
 					.HasColumnType("varchar(32)")
 					.HasComment("密码加密的salt值")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 
 				entity.Property(e => e.Username)
 					.IsRequired()
@@ -951,7 +951,7 @@ namespace Parent.MSACommerce.Model
 					.HasColumnType("varchar(32)")
 					.HasComment("用户名")
 					.HasCharSet("utf8")
-					.HasCollation("utf8_general_ci");
+					.UseCollation("utf8_general_ci");
 			});
 
 			OnModelCreatingPartial(modelBuilder);
