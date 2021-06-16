@@ -34,16 +34,14 @@ namespace Parent.AgileFramework.Core.ConsulExtend
         #endregion
         public void KVShow()
         {
-            using (ConsulClient client = new ConsulClient(c =>
+            using ConsulClient client = new ConsulClient(c =>
             {
                 c.Address = new Uri(this._Address);
                 c.Datacenter = this._Datacenter;
-            }))
-            {
-                client.KV.Put(new KVPair("Eleven") { Value = Encoding.UTF8.GetBytes("This is Teacher") });
-                Console.WriteLine(client.KV.Get("Eleven"));
-                client.KV.Delete("Eleven");
-            }
+            });
+            client.KV.Put(new KVPair("Eleven") { Value = Encoding.UTF8.GetBytes("This is Teacher") });
+            Console.WriteLine(client.KV.Get("Eleven"));
+            client.KV.Delete("Eleven");
         }
 
         #region 分布式锁

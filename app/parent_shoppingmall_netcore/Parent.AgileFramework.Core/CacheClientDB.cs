@@ -81,7 +81,6 @@ namespace Parent.MSACommerce.Core
 		private T TryCatch<T>(Func<T> action, string key)
 		{
 			Stopwatch sw = Stopwatch.StartNew();
-			Exception ex = null;
             bool isError = false;
             T result;
 			try
@@ -91,8 +90,7 @@ namespace Parent.MSACommerce.Core
 			catch (Exception exinfo)
 			{
 				isError = true;
-				throw exinfo;
-				ex = exinfo;
+                throw exinfo;
 			}
 			finally
 			{
@@ -108,7 +106,6 @@ namespace Parent.MSACommerce.Core
 
 			Stopwatch sw = Stopwatch.StartNew();
 			bool isError = false;
-			//Exception ex = null;
 			try
 			{
 				action();

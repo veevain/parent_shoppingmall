@@ -6,7 +6,6 @@ E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.WebCor
 E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.WebCore\obj\Debug\net5.0\Parent.MSACommerce.WebCore.GeneratedMSBuildEditorConfig.editorconfig
 E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.WebCore\obj\Debug\net5.0\Parent.MSACommerce.WebCore.AssemblyInfoInputs.cache
 E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.WebCore\obj\Debug\net5.0\Parent.MSACommerce.WebCore.AssemblyInfo.cs
-E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.WebCore\bin\Debug\net5.0\Parent.MSACommerce.Model.exe
 E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.WebCore\bin\Debug\net5.0\Parent.MSACommerce.WebCore.deps.json
 E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.WebCore\bin\Debug\net5.0\Parent.MSACommerce.WebCore.dll
 E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.WebCore\bin\Debug\net5.0\ref\Parent.MSACommerce.WebCore.dll
@@ -23,3 +22,6 @@ E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.WebCor
 E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.WebCore\obj\Debug\net5.0\Parent.MSACommerce.WebCore.dll
 E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.WebCore\obj\Debug\net5.0\ref\Parent.MSACommerce.WebCore.dll
 E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.WebCore\obj\Debug\net5.0\Parent.MSACommerce.WebCore.pdb
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.WebCore\bin\Debug\net5.0\Parent.MSACommerce.DTOModel.exe
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.WebCore\bin\Debug\net5.0\Parent.MSACommerce.DTOModel.dll
+E:\parent_shoppingmall\app\parent_shoppingmall_netcore\Parent.MSACommerce.WebCore\bin\Debug\net5.0\Parent.MSACommerce.DTOModel.pdb

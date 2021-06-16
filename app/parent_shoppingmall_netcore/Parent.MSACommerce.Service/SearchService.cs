@@ -114,12 +114,14 @@ namespace Parent.MSACommerce.Service
             foreach (TbSku sku in skuList)
             {
                 priceSet.Add(sku.Price);
-                Dictionary<string, object> dic = new Dictionary<string, object>();
-                dic.Add("id", sku.Id);
-                dic.Add("title", sku.Title);
-                //sku中有多个图片，只展示第一张
-                dic.Add("image", sku.Images.Split(",")[0]);
-                dic.Add("price", sku.Price);
+                Dictionary<string, object> dic = new Dictionary<string, object>
+                {
+                    { "id", sku.Id },
+                    { "title", sku.Title },
+                    //sku中有多个图片，只展示第一张
+                    { "image", sku.Images.Split(",")[0] },
+                    { "price", sku.Price }
+                };
                 // 添加到字典中
                 skus.Add(dic);
             }
@@ -283,8 +285,10 @@ namespace Parent.MSACommerce.Service
                 string name = param.Name;
                 // 如果对keyword类型的字符串进行搜索必须是精确匹配terms
                 //queryBuilder.addAggregation(AggregationBuilders.terms(name).field("specs." + name + ".keyword"));
-                Dictionary<string, object> map = new Dictionary<string, object>();
-                map.Add("k", name);
+                Dictionary<string, object> map = new Dictionary<string, object>
+                {
+                    { "k", name }
+                };
                 var dicspec = goods.Select(m => m.specs).Where(m => m.Keys.Contains(name));
 
                 var options = new List<string>();

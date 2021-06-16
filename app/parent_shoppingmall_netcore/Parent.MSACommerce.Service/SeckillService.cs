@@ -160,17 +160,19 @@ namespace Parent.MSACommerce.Service
                 var listsku = listsku1.ToList();
                 foreach (var goods in listsku)
                 {
-                    SeckillGoods seckillGoods = new SeckillGoods();
-                    seckillGoods.Id = goods.Id;
-                    seckillGoods.SkuId = goods.SkuId;
-                    seckillGoods.Title = goods.Title;
-                    seckillGoods.SeckillPrice = goods.SeckillPrice;
-                    seckillGoods.Image = goods.Image;
-                    seckillGoods.StartTime = goods.StartTime;
-                    seckillGoods.EndTime = goods.EndTime;
-                    seckillGoods.Enable = goods.Enable;
-                    seckillGoods.Stock = _orangeContext.TbStock.FirstOrDefault(m => m.SkuId == goods.SkuId).Stock;
-                    seckillGoods.Price = _orangeContext.TbSku.FirstOrDefault(m => m.Id == goods.SkuId).Price;
+                    SeckillGoods seckillGoods = new SeckillGoods
+                    {
+                        Id = goods.Id,
+                        SkuId = goods.SkuId,
+                        Title = goods.Title,
+                        SeckillPrice = goods.SeckillPrice,
+                        Image = goods.Image,
+                        StartTime = goods.StartTime,
+                        EndTime = goods.EndTime,
+                        Enable = goods.Enable,
+                        Stock = _orangeContext.TbStock.FirstOrDefault(m => m.SkuId == goods.SkuId).Stock,
+                        Price = _orangeContext.TbSku.FirstOrDefault(m => m.Id == goods.SkuId).Price
+                    };
                     //添加缓存数据，等到数据库库存用完时清理，或者秒杀活动时间截止后清理(TODO)
                     _cacheClientDB.SetEntryInHash(SeckillService.KEY_PREFIX_GOODS, seckillGoods.SkuId.ToString(), seckillGoods);
                     _cacheClientDB.SetEntryInHash(SeckillService.KEY_PREFIX_STOCK, seckillGoods.SkuId.ToString(), goods.Stock);

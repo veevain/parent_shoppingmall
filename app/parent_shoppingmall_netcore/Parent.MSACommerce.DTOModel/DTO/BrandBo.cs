@@ -7,11 +7,11 @@ namespace Parent.MSACommerce.Model.DTO
 
 	public class BrandBo
 	{
-		private long id;
-		private string name;
-		private string image;
-		private List<long> cids;
-		private char letter;
+        public long id { get; set; }
+		public string name { get; set; }
+		public string image { get; set; }
+		public List<long> cids { get; set; }
+		public char letter { get; set; }
 
 	}
 }

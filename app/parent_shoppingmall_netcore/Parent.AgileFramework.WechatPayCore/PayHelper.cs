@@ -46,7 +46,8 @@ namespace Parent.AgileFramework.WechatPayCore
                 //货币（默认就是人民币）
                 data.SetValue("fee_type", "CNY");
                 //TODO 总金额 （模拟1分钱， 线上环境换成真实价格）
-                data.SetValue("total_fee", /*totalPay.ToString()*/ 1);
+                totalPay = 1;
+                data.SetValue("total_fee", totalPay.ToString());
                 //调用微信支付的终端ip
                 data.SetValue("spbill_create_ip", "0.0.0.0");
                 //回调地址
